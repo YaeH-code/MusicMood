@@ -15,4 +15,12 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/humeurs', name: 'app_humeurs')]
+    public function humeurs(): Response
+    {
+        return $this->render('humeurs/humeurs.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
