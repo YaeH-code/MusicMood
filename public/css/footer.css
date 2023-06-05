@@ -1,0 +1,12 @@
+
+.footer{
+    position: absolute; bottom: 0;
+    background-color:#100A80 ;
+   
+}
+
+ul{
+    list-style: none;
+    color: white;
+    text-align: right;
+}
