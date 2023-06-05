@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Music{% endblock %}
+
+{% block body %}
+    <h1>Music</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ music.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ music.title }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ music.url }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <a href="{{ path('app_comment_new', {'id': music.id}) }}">Ajouter un Commentaire</a>
+    </div>
+
+    <div>
+        {% for comment in comments %}
+            <div>{{ comment.user.pseudo }}</div>
+            <div>{{ comment.content }}</div>
+        {% endfor %}
+    </div>
+{% endblock %}
