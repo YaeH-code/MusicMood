@@ -1,0 +1,14 @@
+.navbar{
+  background-color: #100A80;
+  font-family: 'EB Garamond', serif;
+  height: 90px;
+}
+
+.na-item > a {
+  color: #fff;
+}
+
+#logo{
+  width: 125px;
+  height: 120px;
+}
