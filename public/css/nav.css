@@ -1,6 +1,6 @@
 .navbar{
   background-color: #100A80;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Abel', sans-serif;
   height: 90px;
 }
 
@@ -11,4 +11,14 @@
 #logo{
   width: 125px;
   height: 120px;
+}
+
+.searchbox_nav {
+  width: 300px;
+}
+
+.icon_search_nav{
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 10px;
 }

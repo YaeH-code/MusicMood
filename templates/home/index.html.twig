@@ -8,11 +8,15 @@
 {% block body %}
 
 <div class="container text-center">
-    <img src="{{asset('images/logo_accueil.png')}}"></img>
+    <img src="{{asset('images/logo_acceuil.png')}}"></img>
     <p>L'application qui vous trouve une musique vidéo selon votre humeur</p>
 
-    <form class="d-flex " role="search">
-        <input class="form-control me-2" type="search" aria-label="Search">
+    <form class="searchbox" role="search">
+    {# <div class=""> #}
+        <input class="form-control me-2 bg-light" type="search" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass icon_search"></i>
+        {# </div> #}
+      </form>
     </form>
 </div>
 {% endblock %}
