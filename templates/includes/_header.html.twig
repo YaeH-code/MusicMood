@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg shadow-1">
   <div class="container-fluid">
     <a href="{{ path('app_home') }}">
@@ -6,11 +7,18 @@
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+
+
+
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse navBarCollapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+
           <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Humeur</a>
+
+        
+
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="{{ path('app_register') }}">Inscription</a>
@@ -24,7 +32,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ path('app_admin_comment_index') }}">Commentaire</a></li>
-            <li><a class="dropdown-item" href="{{ path('app_admin_mood_index') }}">Humeur</a></li>
+            <li><a class="dropdown-item" href="{{ path('app_admin_mood_index') }}">Mood</a></li>
             <li><a class="dropdown-item" href="{{ path('app_admin_music_index') }}">Musique</a></li>
             <li><a class="dropdown-item" href="{{ path('app_admin_user_index') }}">Utilisateur</a></li>
           </ul>
@@ -50,3 +58,37 @@
     </div>
   </div>
 </nav>
+
+{# <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid">
+    <img src="{{asset('images/logo_nav.png')}}" id="logo"></img>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Humeur
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inscription</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Connexion</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Espace admin</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Page d'admin</a>
+          </div>
+        </li>
+      </ul>
+      <div class="input-group searchbox_nav">
+        <input type="search" class="form-control rounded bg-light" aria-label="Search" aria-describedby="search-addon" />
+          <i class="fas fa-search icon_search_nav"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</nav> #}

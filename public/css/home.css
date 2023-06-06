@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
-body{
-  background: rgb(255,133,214);
-  background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
-}
-
 .logo_accueil{
   width: 50vh;
   height: 50vh;
@@ -42,6 +37,6 @@ p{
   position: absolute;
   left: 10px;
   font-size: 1rem;
-  color: #100A80;
+  color: #3a118d;
   cursor: pointer;
 }
