@@ -1,14 +1,10 @@
 
-<nav class="navbar navbar-expand-lg shadow-1">
-  <div class="container-fluid">
-    <a href="{{ path('app_home') }}">
-      <img src="{{asset('images/logo_nav.png')}}" id="logo" alt="Logo">
-    </a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-
-
+{% block header %}
+<nav class="navbar navbar-expand-lg navbar-dark shadow-1 navBar">
+   <div class="container-fluid container_nav">
+    <a href="{{ path('app_home') }}"><img src="{{asset('images/logo_nav.png')}}" id="logo"></img></a>
+    <button class="navbar-toggler headerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon navSpan"></span>
 
     </button>
     <div class="collapse navbar-collapse navBarCollapse" id="navbarSupportedContent">
@@ -58,6 +54,7 @@
     </div>
   </div>
 </nav>
+{% endblock %}
 
 {# <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
   <div class="container-fluid">
