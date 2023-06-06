@@ -1,35 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mood index{% endblock %}
+{% block title %}Liste des humeurs{% endblock %}
+{% block stylesheets %}
+<style>
+    h1{
+        font-size: 45px;
+        text-align: center;
+    }
 
+    .category > ul{
+        list-style: none;
+    }
+
+</style>
+
+{% endblock %}
 {% block body %}
-    <h1>Mood index</h1>
+        <h1 class="mt-5 mb-5">Liste des humeurs</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for mood in moods %}
-            <tr>
-                <td>{{ mood.id }}</td>
-                <td>{{ mood.name }}</td>
-                <td>
-                    <a href="{{ path('app_mood_show', {'id': mood.id}) }}">show</a>
-                
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+    <div class="container mt-3 mb-5">
+            {% for mood in moods %}
+        <div class="card category">
+                <ul>
+                    <li>{{ mood.name }}</li>
+                    <li><a href="{{ path('app_mood_show', {'id': mood.id}) }}">Détail</a></li>
+                </ul>
+            {% else %}
+                    <p class="fs-4">Il y n'y a rien à ajouter</p>
+        </div>
+            {% endfor %}
+    </div>
     
 {% endblock %}
