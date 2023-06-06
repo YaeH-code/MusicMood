@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg shadow-1">
-  <div class="container-fluid">
-    <img src="{{asset('images/logo_nav.png')}}" id="logo" alt="Logo"></img>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark shadow-1 navBar">
+   <div class="container-fluid container_nav">
+    <img src="{{asset('images/logo_nav.png')}}" id="logo"></img>
+    <button class="navbar-toggler headerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon navSpan"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse navBarCollapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active text-light" aria-current="page" href="{{ path('app_admin_mood_index') }}">Humeur</a>
@@ -36,3 +36,37 @@
     </div>
   </div>
 </nav>
+
+{# <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid">
+    <img src="{{asset('images/logo_nav.png')}}" id="logo"></img>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Humeur
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inscription</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Connexion</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Espace admin</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Page d'admin</a>
+          </div>
+        </li>
+      </ul>
+      <div class="input-group searchbox_nav">
+        <input type="search" class="form-control rounded bg-light" aria-label="Search" aria-describedby="search-addon" />
+          <i class="fas fa-search icon_search_nav"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</nav> #}
