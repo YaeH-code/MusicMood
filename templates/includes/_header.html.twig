@@ -1,20 +1,31 @@
 
-{% block header %}
-<nav class="navbar navbar-expand-lg navbar-dark shadow-1 navBar">
-   <div class="container-fluid container_nav">
-    <a href="{{ path('app_home') }}"><img src="{{asset('images/logo_nav.png')}}" id="logo"></img></a>
-    <button class="navbar-toggler headerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon navSpan"></span>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Book Store</title>
+    <!-- Liens vers les fichiers CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+   
 
+
+  <nav class="navbar navbar-expand-lg navbar navbar-dark ">
+ 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse navBarCollapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="{{ path('app_home') }}"><img src="{{asset('images/logo_nav.png')}}" width="100" id="logo" alt="Logo"></a>
+        </li>
         <li class="nav-item">
-
           <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Humeur</a>
-
-        
-
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="{{ path('app_register') }}">Inscription</a>
@@ -23,69 +34,35 @@
           <a class="nav-link text-light" href="{{ path('app_login') }}">Connexion</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Espace admin
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Espace Admin
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ path('app_admin_comment_index') }}">Commentaire</a></li>
-            <li><a class="dropdown-item" href="{{ path('app_admin_mood_index') }}">Mood</a></li>
-            <li><a class="dropdown-item" href="{{ path('app_admin_music_index') }}">Musique</a></li>
-            <li><a class="dropdown-item" href="{{ path('app_admin_user_index') }}">Utilisateur</a></li>
-          </ul>
+            <li><a class="dropdown-item" href="{{path('app_admin_mood_index')}}">Catégories</a></li>  
+            <li><a class="dropdown-item" href="{{path('app_admin_music_index')}}">musics</a></li>
+            <li><a class="dropdown-item" href="{{path('app_admin_comment_index')}}">Commentaires</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{path('app_admin_user_index')}}">Utilisateurs</a></li>
+            
+        </ul>
         </li>
-      </ul>
-
-
       
-      {# <div class="input-group searchbox_nav" action="{{ path('app_lookup')}}" method="GET">
-        <input type="search" name="search "class="form-control rounded bg-light" aria-label="Search" aria-describedby="search-addon" />
-        <span class="input-group-text">
-          <i class="fas fa-search icon_search_nav"></i>
-        </span>
-      </div> #}
-      <form class="d-flex justify-content-center " role="search" action="{{path('app_lookup')}}" method="GET">
-        <div class="input-group input-group-sm custom-search-bar">
-          <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-outline-success" type="submit">Chercher</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</nav>
-{% endblock %}
-
-{# <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-  <div class="container-fluid">
-    <img src="{{asset('images/logo_nav.png')}}" id="logo"></img>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Humeur
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Inscription</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Connexion</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Espace admin</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Page d'admin</a>
-          </div>
-        </li>
       </ul>
-      <div class="input-group searchbox_nav">
-        <input type="search" class="form-control rounded bg-light" aria-label="Search" aria-describedby="search-addon" />
-          <i class="fas fa-search icon_search_nav"></i>
-        </span>
+
+    <form class="d-flex justify-content-center" role="search" action="{{path('app_lookup')}}" method="GET">
+      <div class="input-group input-group-sm custom-search-bar">
+        <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-outline-success" type="submit">Chercher</button>
+        </div>
       </div>
-    </div>
-  </div>
-</nav> #}
+    </form>
+    
+  </nav>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
