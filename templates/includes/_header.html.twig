@@ -1,13 +1,16 @@
 <nav class="navbar navbar-expand-lg shadow-1">
   <div class="container-fluid">
-    <img src="{{asset('images/logo_nav.png')}}" id="logo" alt="Logo"></img>
+    <a href="{{ path('app_home') }}">
+      <img src="{{asset('images/logo_nav.png')}}" id="logo" alt="Logo">
+    </a>
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="{{ path('app_admin_mood_index') }}">Humeur</a>
+          <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Humeur</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="{{ path('app_register') }}">Inscription</a>
@@ -27,12 +30,23 @@
           </ul>
         </li>
       </ul>
-      <div class="input-group searchbox_nav">
-        <input type="search" class="form-control rounded bg-light" aria-label="Search" aria-describedby="search-addon" />
+
+
+      
+      {# <div class="input-group searchbox_nav" action="{{ path('app_lookup')}}" method="GET">
+        <input type="search" name="search "class="form-control rounded bg-light" aria-label="Search" aria-describedby="search-addon" />
         <span class="input-group-text">
           <i class="fas fa-search icon_search_nav"></i>
         </span>
-      </div>
+      </div> #}
+      <form class="d-flex justify-content-center " role="search" action="{{path('app_lookup')}}" method="GET">
+        <div class="input-group input-group-sm custom-search-bar">
+          <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-outline-success" type="submit">Chercher</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </nav>

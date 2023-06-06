@@ -12,11 +12,19 @@
     <img src="{{asset('images/logo_acceuil.png')}}"></img>
     <p>L'application qui vous trouve une musique vidéo selon votre humeur</p>
 
-    <form class="searchbox" role="search">
-    {# <div class=""> #}
+    {# <form class="searchbox" role="search">
+   
         <input class="form-control me-2 bg-light" type="search" aria-label="Search">
         <i class="fa-solid fa-magnifying-glass icon_search"></i>
-        {# </div> #}
+       
+      </form> #}
+      <form class="d-flex justify-content-center" role="search" action="{{path('app_lookup')}}" method="GET">
+        <div class="input-group input-group-sm custom-search-bar">
+          <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-outline-success" type="submit">Chercher</button>
+          </div>
+        </div>
       </form>
     </form>
 {% endblock %}

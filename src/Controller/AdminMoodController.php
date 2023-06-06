@@ -16,6 +16,9 @@ class AdminMoodController extends AbstractController
     #[Route('/', name: 'app_admin_mood_index', methods: ['GET'])]
     public function index(MoodRepository $moodRepository): Response
     {
+        // Check if the user has the required role
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('admin_mood/index.html.twig', [
             'moods' => $moodRepository->findAll(),
         ]);
@@ -75,4 +78,13 @@ class AdminMoodController extends AbstractController
 
         return $this->redirectToRoute('app_admin_mood_index', [], Response::HTTP_SEE_OTHER);
     }
-}
+
+        // Add the following method to handle the redirection
+        #[Route('/redirect', name: 'app_admin_mood_redirect')]
+        public function redirectAction(): Response
+        {
+            // Redirect the user to the login page for admin
+            return $this->redirectToRoute('app_login');
+        }
+    }
+
