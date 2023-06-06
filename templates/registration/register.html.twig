@@ -1,22 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
+
+{% block stylesheets %}
+<style>
+    h1{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .category > ul{
+        list-style: none;
+    }
+
+</style>
+
+{% endblock %}
 
 {% block body %}
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
-    <h1>Register</h1>
+    <h1 class="mt-5 mb-5">Inscription</h1>
 
+    <div class="container">
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }} {# Ajout du champ email ici #}
         {{ form_row(registrationForm.pseudo) }}
         {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+            label: 'Mot de pass'
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn">S'inscire</button>
     {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}
