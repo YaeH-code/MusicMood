@@ -8,26 +8,19 @@
 
 {% block body %}
 
-<div class="container text-center">
+<div class="text-center">
     <img src="{{asset('images/logo_accueil.png')}}"></img>
     <p>L'application qui vous trouve une musique vidéo selon votre humeur</p>
-
-
-    {# <form class="searchbox" role="search">
-   
-        <input class="form-control me-2 bg-light" type="search" aria-label="Search">
-
-    <form class="searchbox" role="search">
-    {# <div class=""> #}
-       
       </form> 
-      <form class="d-flex justify-content-center" role="search" action="{{path('app_lookup')}}" method="GET">
-        <div class="input-group input-group-sm custom-search-bar">
+      <form class="d-flex justify-content-center searchbox" role="search" action="{{path('app_lookup')}}" method="GET">
+        <div class="input-group input-group-sm custom-search-bar searchbox_div">
           <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-outline-success" type="submit">Chercher</button>
-          </div>
-        </div>
+          <button type="submit" class="input-group-text ps-3 pe-3 text-white color_nav">
+          <i class="fas fa-search"></i>
+        </button>
       </form>
     </form>
+</div>
+
+{# {% block footer %}{% endblock %} #}
 {% endblock %}
