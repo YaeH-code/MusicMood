@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LookupController!{% endblock %}
+
+{% block body %}
+<div>
+    <form action="{{ path('app_lookup') }}" method="GET">
+        <input type="text" name="search" placeholder="Recherche...">
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
+<table>
+{% if music is not empty %}
+    {% for musicItem in music %}
+    <tr>
+        <td>{{ musicItem.id }}</td>
+        <td>{{ musicItem.title }}</td>
+        <td>{{ musicItem.url }}</td>
+        <td>
+            <a href="{{ path('app_music_show', {'id': musicItem.id}) }}">Show</a>
+        </td>
+    </tr>
+    {% endfor %}
+{% else %}
+    <tr>
+        <td colspan="4">No records found</td>
+    </tr>
+{% endif %}
+</table>
+{% endblock %}
