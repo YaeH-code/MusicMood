@@ -1,4 +1,4 @@
- body{
+body {
   background: rgb(255,133,214);
   background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
   font-family: 'Abel', sans-serif;
@@ -7,4 +7,9 @@
 
   .navbar {
     background-color: #3a118d;
+}
+
+li { 
+  display: flex;
+  align-items: center;
 }

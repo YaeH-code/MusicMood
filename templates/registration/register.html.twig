@@ -8,11 +8,25 @@
         font-size: 45px;
         text-align: center;
     }
-
     .category > ul{
         list-style: none;
     }
-
+    .login_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 40%;
+        height: 50%;
+        box-shadow: 10px 10px 10px 5px gray;
+        background: rgb(255,133,214);
+        background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+    }
 </style>
 
 {% endblock %}
@@ -24,16 +38,29 @@
 
     <h1 class="mt-5 mb-5">Inscription</h1>
 
-    <div class="container">
+    <div class="container text-center login_div">
+    <div class="card">
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }} {# Ajout du champ email ici #}
-        {{ form_row(registrationForm.pseudo) }}
-        {{ form_row(registrationForm.plainPassword, {
+        <div class="form-group">
+        <label for="">Email</label>
+        {{ form_widget(registrationForm.email) }} {# Ajout du champ email ici #}
+        </div>
+        <div class="form-group">
+        <label for="">Pseudo</label>
+        {{ form_widget(registrationForm.pseudo) }}
+        </div>
+        <div class="form-group">
+        <label for="">Mot de passe</label>
+        {{ form_widget(registrationForm.plainPassword, {
             label: 'Mot de pass'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">S'inscire</button>
+        </div>
+        <div class="form-group">
+        <label for="">Convenir d'un terms</label>
+        {{ form_widget(registrationForm.agreeTerms) }}
+        </div>
+        <button type="submit" class="btn btn-dark">S'inscire</button>
     {{ form_end(registrationForm) }}
+        </div>
     </div>
 {% endblock %}
