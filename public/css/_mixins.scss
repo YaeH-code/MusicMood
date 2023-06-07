@@ -3,3 +3,7 @@
   display: flex;
   align-items: center;
 }
+
+@mixin tool_a() {
+  text-decoration: none;
+}

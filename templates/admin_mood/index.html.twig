@@ -3,33 +3,35 @@
 {% block title %}Mood index{% endblock %}
 
 {% block body %}
-    <h1>Les Moods</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-              
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for mood in moods %}
-            <tr>
-           
-                <td>{{ mood.name }}</td>
-                <td>
-                    <a href="{{ path('app_admin_mood_show', {'id': mood.id}) }}">show</a>
-                    <a href="{{ path('app_admin_mood_edit', {'id': mood.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_admin_mood_new') }}">Create new</a>
+    <h1 class="mt-5 mb-5 text-center">Les Moods</h1>
+    <div class="container">
+        <table class="table table-s table-striped">
+            <thead>
+                <tr class="text-uppercase">
+                
+                    <th>Nom de humeur</th>
+                    <th class="text-center">actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for mood in moods %}
+                <tr>
+            
+                    <td>{{ mood.name }}</td>
+                    <td class="text-center actions_mood">
+                        <a href="{{ path('app_admin_mood_show', {'id': mood.id}) }}">détail</a>
+                        <a href="{{ path('app_admin_mood_edit', {'id': mood.id}) }}">modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="text-center btn_act">
+        <a href="{{ path('app_admin_mood_new') }}" class="btn mt-3">Créer</a>
+        </div>
+    </div>
 {% endblock %}
