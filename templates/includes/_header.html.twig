@@ -28,10 +28,10 @@
           <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Mood</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('app_register') }}">Inscription</a>
+          <a class="nav-link text-light" href="{{ path('app_register') }}">{{app.user ? '' : 'Inscription'}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('app_login') }}">Connexion</a>
+          <a class="nav-link text-light" href="/{{app.user ? 'logout' : 'login'}}">{{app.user ? 'Déconnexion' : 'Connexion'}}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

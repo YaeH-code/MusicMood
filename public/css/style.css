@@ -3,6 +3,7 @@
 /* --------------------------------------- */
 body {
 
+
     background: rgb(255,133,214);
     background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
     font-family: 'Abel', sans-serif;
@@ -19,6 +20,7 @@ body {
     display: flex;
     align-items: center;
   }
+
 
 
 /* --------------------------------------- */
@@ -103,7 +105,7 @@ nav li {
 /* --------------------------------------- */
 /* -----------------Register------------------- */
 /* --------------------------------------- */
-.login_div {
+.register_div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +138,6 @@ nav li {
     padding-right: 1%;
   }
 }
-
 @media (max-width: 767px) {
   .registration {
     width: 60%;
@@ -144,5 +145,8 @@ nav li {
   }
 }
 /* --------------------------------------- */
-/* -----------------Register------------------- */
-/* --------------------------------------- *//*# sourceMappingURL=style.css.map */
+/* -----------------Connexion------------------- */
+/* --------------------------------------- */
+.login_info {
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */
