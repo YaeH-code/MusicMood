@@ -144,17 +144,3 @@ nav li {
 /* --------------------------------------- */
 /* -----------------Register------------------- */
 /* --------------------------------------- *//*# sourceMappingURL=style.css.map */
-
-img{
-  width: 50%;
-}
-
-@media only screen and (min-width : 1224px){
-  
-img{
-  width: 30%;
-}
-
-  }
-
-
