@@ -12,7 +12,7 @@
     <div class="container text-center">
         <div class="card-body row ">
             {% for mood in moods %}
-            <div class="card category mb-3 text-wrap col-md-6">
+            <div class="card category text-wrap col-md-6">
                     <a href="{{ path('app_mood_show', {'id': mood.id}) }}">{{ mood.name }}</a>
             </div>
             {% else %}
