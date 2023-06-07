@@ -1,5 +1,5 @@
 
-
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 .wave {
   animation: wave 3s linear;
   animation-iteration-count:infinite;
@@ -39,6 +39,23 @@
   animation-duration: 7s;
   opacity:.3;
 }
+
+	  .topball {
+		animation: ball 1.5s ease-in-out;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-delay: 0.3s;
+		cursor: pointer;
+	  }
+	  
+	  @keyframes ball {
+		0% {
+		  transform: translateY(0);
+		}
+		100% {
+		  transform: translateY(100px);
+		}
+	  }
 @keyframes drop {
   0% {
     transform: translateY(80%); 
