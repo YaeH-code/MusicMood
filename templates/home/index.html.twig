@@ -2,25 +2,24 @@
 
 {% block title %}Music Mood{% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{asset('css/home.css')}}">
-{% endblock %}
-
 {% block body %}
-
-<div class="text-center">
-    <img src="{{asset('images/logo_accueil.png')}}"></img>
-    <p>L'application qui vous trouve une musique vidéo selon votre humeur</p>
-      </form> 
-      <form class="d-flex justify-content-center searchbox" role="search" action="{{path('app_lookup')}}" method="GET">
-        <div class="input-group input-group-sm custom-search-bar searchbox_div">
-          <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search">
-          <button type="submit" class="input-group-text ps-3 pe-3 text-white color_nav">
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-    </form>
-</div>
-
+<main>
+  <div class="container text-center">
+      <img class="img_home" src="{{asset('images/logo_accueil.png')}}"></img>
+      <p class="p_home">L'application qui vous trouve une musique vidéo selon votre humeur</p>
+        <form class="form-group row searchbox" role="search" action="{{path('app_lookup')}}" method="GET">
+          <div class="input-group input-group-sm mt-5 mb-3 custom-search-bar">
+            {# <div class="col-sm-5"> #}
+            {# <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search"> #}
+        {# <label for="ex3"></label> #}
+            <input class="form-control" id="ex3" name="search" type="search" placeholder="Rechercher" aria-label="Search">
+            <button type="submit" class="input-group-text ps-3 pe-3 text-white btn_icon_home">
+            <i class="fas fa-search"></i>
+          </button>
+            {# </div> #}
+          </div>
+        </form>
+  </div>
+</main>
 {# {% block footer %}{% endblock %} #}
 {% endblock %}

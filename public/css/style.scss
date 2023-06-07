@@ -1,0 +1,107 @@
+
+@import 'mixins';
+@import 'colors';
+
+/* --------------------------------------- */
+/* ------Pour toutes les pages------------ */
+/* --------------------------------------- */
+
+body {
+    background: $color-background;
+    background: $color-background-gradient;
+    font-family: 'Abel', sans-serif;
+  }
+
+
+/* --------------------------------------- */
+/* -----------------nav------------------- */
+/* --------------------------------------- */
+
+  nav {
+      background-color:  $nav-color;
+   li { 
+    @include flex();
+    }
+  }
+/* --------------------------------------- */
+/* -----------------Home------------------- */
+/* --------------------------------------- */
+
+  .p_home{
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .img_home{
+    width: 60vh;
+    height: 50vh;
+  }
+
+
+  .btn_icon_home{
+  background-color:  $nav-color !important;
+
+  }
+
+  @media (max-width: 750px) {
+    .img_home{
+      width: 40vh;
+      height: 30vh;
+    }
+    .p_home{
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .p_home{
+      font-size: 13px;
+    }
+    // .searchbox_div{
+    //   margin-left: auto;
+    //   margin-right: auto;
+    //   width: 100px;
+    // }
+  }
+
+
+/* --------------------------------------- */
+/* -----------------Mood------------------- */
+/* --------------------------------------- */
+
+.category > ul{
+    list-style: none;
+
+}
+
+/* --------------------------------------- */
+/* -----------------Register------------------- */
+/* --------------------------------------- */
+
+.login_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+    height: 50%;
+    box-shadow: 10px 10px 10px 5px gray;
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+}
+
+/* --------------------------------------- */
+/* -----------------Register------------------- */
+/* --------------------------------------- */
+
+.category{
+    box-shadow: 10px 10px 10px 5px gray;
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+}
+  

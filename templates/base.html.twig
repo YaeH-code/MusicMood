@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
 		<link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/nav.css') }}"> {% block stylesheets %}{% endblock %}
+ {% block stylesheets %}{% endblock %}
 		{# <link rel="icon" href="images/favicon.ico"> #}
 
 		{% block javascripts %}{% endblock %}
@@ -25,7 +25,7 @@
 			{% include 'includes/_header.html.twig'%}
 		{% endblock %}
 		{% block body %}
-			Par default
+			Par default			
 		{% endblock %}
 		{% block footer %}
 			{% include 'includes/_footer.html.twig'%}
