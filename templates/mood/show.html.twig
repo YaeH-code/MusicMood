@@ -35,7 +35,7 @@
                     <tr>
                         <td>{{ music.id }}</td>
                         <td>{{ music.title }}</td>
-                        <td>{{ music.url }}</td>
+                        <td><a href="{{ music.url }}">{{ music.url }}</a></td>
                         <td>
                             <a href="{{ path('app_music_show', {'id': music.id}) }}">Show</a>
                         </td>
