@@ -1,0 +1,47 @@
+body {
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+    font-family: 'Abel', sans-serif;
+  }
+  
+  
+    .navbar {
+      background-color:  #6033bb;
+  }
+  
+  li { 
+    display: flex;
+    align-items: center;
+  }
+
+  h1{
+    font-size: 45px;
+    text-align: center;
+}
+.category > ul{
+    list-style: none;
+
+}
+.login_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 40%;
+    height: 50%;
+    box-shadow: 10px 10px 10px 5px gray;
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+}
+
+.category{
+    box-shadow: 10px 10px 10px 5px gray;
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+}
+  
