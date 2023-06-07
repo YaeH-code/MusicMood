@@ -6,19 +6,18 @@
 
 {% endblock %}
 {% block body %}
-        <h1 class="mt-5 mb-5">Liste des humeurs</h1>
+<main>
+        <h1 class="title_mood mt-5 mb-5">Liste des humeurs</h1>
 
-    <div class="container mt-3 mb-5">
+    <div class="container text-center">
+        <div class="card-body row ">
             {% for mood in moods %}
-        <div class="card category">
-                <ul>
-                    <li>{{ mood.name }}</li>
-                    <li><a href="{{ path('app_mood_show', {'id': mood.id}) }}">Détail</a></li>
-                </ul>
+            <div class="card category mb-3 text-wrap col-md-6">
+                    <a href="{{ path('app_mood_show', {'id': mood.id}) }}">{{ mood.name }}</a>
+            </div>
             {% else %}
                     <p class="fs-4">Il y n'y a rien à ajouter</p>
-        </div>
             {% endfor %}
-    </div>
-    
+        </div>
+</main>
 {% endblock %}
