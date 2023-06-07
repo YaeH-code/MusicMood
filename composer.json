@@ -32,7 +32,11 @@
         "symfony/process": "6.3.*",
         "symfony/property-access": "6.3.*",
         "symfony/property-info": "6.3.*",
+<<<<<<< HEAD
         "symfony/runtime": "6.3.*",
+=======
+        "symfony/runtime": "^6.3",
+>>>>>>> 7a1a7b7c6cfacdb9e6866a13207795e3f0e5783f
         "symfony/security-bundle": "6.3.*",
         "symfony/serializer": "6.3.*",
         "symfony/string": "6.3.*",

@@ -2,10 +2,27 @@
 /* ------Pour toutes les pages------------ */
 /* --------------------------------------- */
 body {
+<<<<<<< HEAD
   background: rgb(255, 133, 214);
   background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
   font-family: "Abel", sans-serif;
 }
+=======
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+    font-family: 'Abel', sans-serif;
+  }
+  
+  
+    .navbar {
+      background-color: #4b0fc2;
+  }
+  
+  li { 
+    display: flex;
+    align-items: center;
+  }
+>>>>>>> 7a1a7b7c6cfacdb9e6866a13207795e3f0e5783f
 
 /* --------------------------------------- */
 /* -----------------nav------------------- */
@@ -122,6 +139,7 @@ nav li {
     padding-right: 1%;
   }
 }
+<<<<<<< HEAD
 @media (max-width: 767px) {
   .registration {
     width: 60%;
@@ -131,3 +149,7 @@ nav li {
 /* --------------------------------------- */
 /* -----------------Register------------------- */
 /* --------------------------------------- *//*# sourceMappingURL=style.css.map */
+=======
+  
+
+>>>>>>> 7a1a7b7c6cfacdb9e6866a13207795e3f0e5783f
