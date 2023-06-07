@@ -3,10 +3,26 @@
 /* ------Pour toutes les pages------------ */
 /* --------------------------------------- */
 body {
-  background: rgb(255, 133, 214);
-  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
-  font-family: "Abel", sans-serif;
-}
+
+
+    background: rgb(255,133,214);
+    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+    font-family: 'Abel', sans-serif;
+
+    
+  }
+  
+  
+    .navbar {
+      background-color: #4b0fc2;
+  }
+  
+  li { 
+    display: flex;
+    align-items: center;
+  }
+
+
 
 /* --------------------------------------- */
 /* -----------------nav------------------- */
