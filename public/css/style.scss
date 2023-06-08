@@ -31,6 +31,9 @@ body {
   height: 100vh;
 }
 
+p,h1,h2,h3{
+  color: $p;
+}
   .p_home{
     font-size: 28px;
     text-align: center;
@@ -245,3 +248,5 @@ table tr td, table tr th{
   @include tool_a();
   color: green;
 }
+
+
