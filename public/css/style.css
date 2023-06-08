@@ -167,6 +167,8 @@ table tr td, table tr th {
   border-radius: 5px;
 }
 
+
+
 .table-borderless > tbody > tr > td,
 .table-borderless > tbody > tr > th,
 .table-borderless > tfoot > tr > td,
@@ -262,3 +264,4 @@ table tr td, table tr th {
   color: #391384;
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
+
