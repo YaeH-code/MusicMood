@@ -26,6 +26,10 @@ nav li {
   height: 100vh;
 }
 
+p, h1, h2, h3 {
+  color: #391384;
+}
+
 .p_home {
   font-size: 28px;
   text-align: center;
