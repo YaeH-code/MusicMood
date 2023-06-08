@@ -26,6 +26,10 @@ nav li {
   height: 100vh;
 }
 
+p, h1, h2, h3 {
+  color: #391384;
+}
+
 .p_home {
   font-size: 28px;
   text-align: center;
@@ -154,25 +158,6 @@ nav li {
 }
 
 /* --------------------------------------- */
-<<<<<<< HEAD
-/* -----------------Mood show page------------------- */
-/* --------------------------------------- */
-table tr td, table tr th {
-  background-color: #5523b9 !important;
-  box-shadow: 10px 10px 10px 5px gray !important;
-  color: #fff !important;
-}
-
-.table-borderless > tbody > tr > td,
-.table-borderless > tbody > tr > th,
-.table-borderless > tfoot > tr > td,
-.table-borderless > tfoot > tr > th,
-.table-borderless > thead > tr > td,
-.table-borderless > thead > tr > th {
-  border: none;
-}
-
-=======
 /*-----------Politique de confidentialité-----------*/
 /* --------------------------------------- */
 .h1_politique{
@@ -194,7 +179,6 @@ table tr td, table tr th {
 }
 
 
->>>>>>> 3a3f70494b8990dfd4d34def47ec24ed99c54ca4
 /* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
 /* --------------------------------------- */
