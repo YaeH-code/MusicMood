@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1 class="mt-5 mb-5 text-center">Mood</h1>
-    <div class="container">
+    <div class="container mood_div">
         <table class="table table-borderless ">
         <tbody>
             <tr>
@@ -21,9 +21,9 @@
                 {% for music in music %}
                     <tr>
                         <td>{{ music.title }}</td>
-                        <td> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
-                        <td>
-                            <a class="a_mood" href="{{ path('app_music_show', {'id': music.id}) }}">Let's GO 	&raquo;</a>
+                        <td class="text-center pt-3"> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
+                        <td class="a_mood text-center">
+                            <a href="{{ path('app_music_show', {'id': music.id}) }}" class="btn">Let's GO 	&raquo;</a>
                         </td>
                     </tr>
                 {% else %}
@@ -33,7 +33,9 @@
                 {% endfor %}
             </tbody>
         </table>
-    <a class="a_mood" href="{{ path('app_mood_index') }}">Back to list</a>
+        <div class="a_mood">
+            <a class="a_mood" href="{{ path('app_mood_index') }}">&lsaquo; &lsaquo; Retour à la liste</a>
+        </div>
     </div>
 </div>
 {% endblock %}

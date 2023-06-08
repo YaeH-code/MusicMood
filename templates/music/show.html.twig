@@ -3,14 +3,10 @@
 {% block title %}Music{% endblock %}
 
 {% block body %}
-    <h1>Music</h1>
-
-    <table class="table">
+    <h1 class="mt-5 mb-5 text-center">Music</h1>
+    <div class="container mood_div">
+        <table class="table table-borderless ">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ music.id }}</td>
-            </tr>
             <tr>
                 <th>Title</th>
                 <td>{{ music.title }}</td>
@@ -32,4 +28,5 @@
             <div>{{ comment.content }}</div>
         {% endfor %}
     </div>
+</div>
 {% endblock %}

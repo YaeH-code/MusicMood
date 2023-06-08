@@ -187,6 +187,7 @@ table tr td, table tr th{
   background-color: #5523b9 !important;
   box-shadow: 10px 10px 10px 5px gray !important;
   color: #fff !important;
+  border-radius: 5px;
 }
 
 .table-borderless > tbody > tr > td,
@@ -196,6 +197,14 @@ table tr td, table tr th{
 .table-borderless > thead > tr > td,
 .table-borderless > thead > tr > th {
     border: none;
+}
+
+.a_mood > a{
+  color: #fff;
+}
+
+.a_mood > a:hover{
+  @include tool_a()
 }
 
 /* --------------------------------------- */
@@ -250,6 +259,8 @@ table tr td, table tr th{
 }
 
 
+
+/* --------------------------------------- */
 /*-----------Politique de confidentialité-----------*/
 /* --------------------------------------- */
 .h1_politique{
