@@ -24,17 +24,14 @@
         <li class="nav-item active mt-2 d-flex align-items-center">
           <a href="{{ path('app_home') }}"><img src="{{asset('images/logo_nav.png')}}" width="100" id="logo" alt="Logo"></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Mood</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('app_register') }}">{{app.user ? '' : 'Inscription'}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="/{{app.user ? 'logout' : 'login'}}">{{app.user ? 'Déconnexion' : 'Connexion'}}</a>
+          {% if app.user and 'ROLE_ADMIN' in app.user.roles %}
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Mood</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-light" href="{{ path('app_logout') }}">Déconnexion</a>
         </li>
         <li class="nav-item dropdown">
-          {% if app.user and 'ROLE_ADMIN' in app.user.roles %}
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              Espace Admin
             </a>
@@ -45,6 +42,23 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="{{path('app_admin_user_index')}}">Utilisateurs</a></li>
             </ul>
+          {% elseif app.user and 'ROLE_USER' in app.user.roles %}
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Mood</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{{ path('app_logout') }}">Déconnexion</a>
+            </li>
+            {% else %}
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" href="{{ path('app_mood_index') }}">Mood</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="{{ path('app_register') }}">Inscription</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="{{ path('app_login') }}">Connexion</a>
+        </li>
           {% endif %}
         </li>
       
