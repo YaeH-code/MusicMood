@@ -87,6 +87,9 @@ p, h1, h2, h3 {
   transform: scale(1.2);
 }
 
+.a_mood{
+  color: white;
+}
 @media (max-width: 480px) {
   .title_mood {
     font-size: 30px;
