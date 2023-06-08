@@ -117,8 +117,8 @@ body {
     width: 40%;
     height: 50%;
     box-shadow: 10px 10px 10px 5px gray;
-    background: rgb(255,133,214);
-    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+    background: $color-background;
+    background: $color-background-gradient;
 }
 
 
@@ -156,6 +156,26 @@ body {
 .login_info{
   font-size: 18px;
 }
+
+/* --------------------------------------- */
+/* -----------------Contact Page------------------- */
+/* --------------------------------------- */
+
+.card_contact{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 70%;
+  height: 50%;
+  box-shadow: 10px 10px 10px 5px gray;
+  background: $color-background;
+  background: $color-background-gradient;
+}
+
+
+
+
 
 /* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
@@ -207,7 +227,3 @@ body {
   @include tool_a();
   color: green;
 }
-
-/* --------------------------------------- */
-/* -----------------Admin Mood Modifier------------------- */
-/* --------------------------------------- */

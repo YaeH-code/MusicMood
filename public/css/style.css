@@ -3,26 +3,10 @@
 /* ------Pour toutes les pages------------ */
 /* --------------------------------------- */
 body {
-
-
-    background: rgb(255,133,214);
-    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
-    font-family: 'Abel', sans-serif;
-
-    
-  }
-  
-  
-    .navbar {
-      background-color: #4b0fc2;
-  }
-  
-  li { 
-    display: flex;
-    align-items: center;
-  }
-
-
+  background: rgb(255, 133, 214);
+  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
+  font-family: "Abel", sans-serif;
+}
 
 /* --------------------------------------- */
 /* -----------------nav------------------- */
@@ -153,6 +137,21 @@ nav li {
 }
 
 /* --------------------------------------- */
+/* -----------------Contact Page------------------- */
+/* --------------------------------------- */
+.card_contact {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 70%;
+  height: 50%;
+  box-shadow: 10px 10px 10px 5px gray;
+  background: rgb(255, 133, 214);
+  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
+}
+
+/* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
 /* --------------------------------------- */
 /* --------------------------------------- */
@@ -196,8 +195,4 @@ nav li {
 .edit > a:hover {
   text-decoration: none;
   color: green;
-}
-
-/* --------------------------------------- */
-/* -----------------Admin Mood Modifier------------------- */
-/* --------------------------------------- *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
