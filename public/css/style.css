@@ -158,7 +158,6 @@ p, h1, h2, h3 {
 }
 
 /* --------------------------------------- */
-<<<<<<< HEAD
 /* -----------------Mood show page------------------- */
 /* --------------------------------------- */
 table tr td, table tr th {
@@ -176,29 +175,6 @@ table tr td, table tr th {
   border: none;
 }
 
-=======
-/*-----------Politique de confidentialité-----------*/
-/* --------------------------------------- */
-.h1_politique{
-  margin-top: 40px;
-  color:#391384 ;
-  text-align: center;
-}
-
-.p_politique{
-  color: #391384;
-  margin-left: 30px;
-  margin-right: 30px;
-  font-size: 1.25rem;
-}
-
-.a_politique{
-  color: #391384;
-  font-weight: bold;
-}
-
-
->>>>>>> 1bd32873f37afdcf5ffb93d4c3a6967a00254a6e
 /* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
 /* --------------------------------------- */
