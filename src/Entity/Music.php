@@ -30,6 +30,7 @@ class Music
 
     #[ORM\OneToMany(mappedBy: 'music', targetEntity: Comment::class, orphanRemoval: true)]
     private Collection $comments;
+    
 
     public function __construct()
     {
