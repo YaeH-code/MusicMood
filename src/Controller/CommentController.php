@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\music;
+use App\Entity\Music;
 use App\Entity\Comment;
 use App\Form\Comment1Type;
 use App\Repository\CommentRepository;
@@ -13,19 +13,23 @@ use Symfony\Component\Routing\Annotation\Route;
 use DateTimeImmutable;
 
 #[Route('/music/{id}/comment')]
-
-
 class CommentController extends AbstractController
 {
-    
     #[Route('/new', name: 'app_comment_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, music $music, CommentRepository $commentRepository): Response
+    public function new(Request $request, Music $music, CommentRepository $commentRepository): Response
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user = $this->getUser();
+        
+        // Vérifier si l'utilisateur est connecté et a les rôles requis
+        if (!$user || !($this->isGranted('ROLE_USER') || $this->isGranted('ROLE_ADMIN'))) {
+            return $this->redirectToRoute('app_login');
+        }
+
         $comment = new Comment();
         $comment->setCreatedAt(new DateTimeImmutable());
-        $comment->setUser($this->getUser());
-        $comment->setmusic($music);
+        $comment->setUser($user);
+        $comment->setMusic($music);
+        
         $form = $this->createForm(Comment1Type::class, $comment);
         $form->handleRequest($request);
 
