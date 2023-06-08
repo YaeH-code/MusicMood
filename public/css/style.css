@@ -164,6 +164,7 @@ table tr td, table tr th {
   background-color: #5523b9 !important;
   box-shadow: 10px 10px 10px 5px gray !important;
   color: #fff !important;
+  
 }
 
 .table-borderless > tbody > tr > td,
