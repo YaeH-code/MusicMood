@@ -161,6 +161,24 @@ p, h1, h2, h3 {
 }
 
 /* --------------------------------------- */
+/* -----------------Politique de confidentialités------------------ */
+/* --------------------------------------- */
+.h1_politique{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.p_politique{
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.2rem;
+}
+
+.a_politique{
+  color: #9562fb;
+  font-weight:bold;
+}
+/* --------------------------------------- */
 /* -----------------Mood show page------------------- */
 /* --------------------------------------- */
 table tr td, table tr th {
