@@ -140,7 +140,6 @@ footer div {
 
   #footer-text {
     margin-top:100px;
-
   }
 
   
@@ -149,6 +148,13 @@ footer div {
     margin: 0 10px;
   }
 
+}
+
+@media (max-width: 768px){
+  #footer-text {
+    /* margin-top:100px; */
+    bottom: 2px;
+  }
 }
 
 

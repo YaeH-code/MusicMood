@@ -27,6 +27,10 @@ body {
 /* -----------------Home------------------- */
 /* --------------------------------------- */
 
+.home_div{
+  height: 100vh;
+}
+
   .p_home{
     font-size: 28px;
     text-align: center;
@@ -63,6 +67,10 @@ body {
 /* --------------------------------------- */
 /* -----------------Mood------------------- */
 /* --------------------------------------- */
+
+.mood_div{
+  margin-bottom: 18rem
+}
 
 .card_mood{
   @include flex();
@@ -108,6 +116,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 15rem;
 }
 .registration{
     padding-left: 10%;

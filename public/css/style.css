@@ -22,6 +22,10 @@ nav li {
 /* --------------------------------------- */
 /* -----------------Home------------------- */
 /* --------------------------------------- */
+.home_div {
+  height: 100vh;
+}
+
 .p_home {
   font-size: 28px;
   text-align: center;
@@ -53,6 +57,10 @@ nav li {
 /* --------------------------------------- */
 /* -----------------Mood------------------- */
 /* --------------------------------------- */
+.mood_div {
+  margin-bottom: 18rem;
+}
+
 .card_mood {
   display: flex;
   align-items: center;
@@ -95,6 +103,7 @@ nav li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 15rem;
 }
 
 .registration {
@@ -195,16 +204,4 @@ nav li {
 .edit > a:hover {
   text-decoration: none;
   color: green;
-<<<<<<< HEAD
 }/*# sourceMappingURL=style.css.map */
-=======
-}
-
-/* --------------------------------------- */
-/* -----------------Admin Mood Modifier------------------- */
-/* --------------------------------------- *//*# sourceMappingURL=style.css.map */
-
-
-/* style css pour l'image  */
-
->>>>>>> 8b5b2dcb0bc6de8f7ff0b51316a6bd2406f3227f
