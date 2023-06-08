@@ -19,7 +19,7 @@
             <tr>
                 <td>{{ music.id }}</td>
                 <td>{{ music.title }}</td>
-                <td><a href="{{ music.url }}">{{ music.url }}</a></td>
+                <td> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
                 <td>
                     <a href="{{ path('app_admin_music_show', {'id': music.id}) }}">show</a>
                     <a href="{{ path('app_admin_music_edit', {'id': music.id}) }}">edit</a>
