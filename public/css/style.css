@@ -154,7 +154,6 @@ nav li {
 }
 
 /* --------------------------------------- */
-<<<<<<< HEAD
 /* -----------------Mood show page------------------- */
 /* --------------------------------------- */
 table tr td, table tr th {
@@ -172,29 +171,6 @@ table tr td, table tr th {
   border: none;
 }
 
-=======
-/*-----------Politique de confidentialité-----------*/
-/* --------------------------------------- */
-.h1_politique{
-  margin-top: 40px;
-  color:#391384 ;
-  text-align: center;
-}
-
-.p_politique{
-  color: #391384;
-  margin-left: 30px;
-  margin-right: 30px;
-  font-size: 1.25rem;
-}
-
-.a_politique{
-  color: #391384;
-  font-weight: bold;
-}
-
-
->>>>>>> 3a3f70494b8990dfd4d34def47ec24ed99c54ca4
 /* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
 /* --------------------------------------- */
@@ -239,4 +215,24 @@ table tr td, table tr th {
 .edit > a:hover {
   text-decoration: none;
   color: green;
+}
+
+/*-----------Politique de confidentialité-----------*/
+/* --------------------------------------- */
+.h1_politique {
+  margin-top: 40px;
+  color: #391384;
+  text-align: center;
+}
+
+.p_politique {
+  color: #391384;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.25rem;
+}
+
+.a_politique {
+  color: #391384;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
