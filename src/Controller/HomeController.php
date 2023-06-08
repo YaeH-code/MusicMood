@@ -23,5 +23,13 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    
+    #[Route('/politique', name: 'app_politique')]
+    public function politique(): Response
+    {
+        return $this->render('politique/_politique.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 
 }
