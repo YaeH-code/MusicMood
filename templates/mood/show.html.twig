@@ -26,6 +26,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Title</th>
+                    <th>Url</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -34,17 +35,14 @@
                     <tr>
                         <td>{{ music.id }}</td>
                         <td>{{ music.title }}</td>
+                        <td> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
                         <td>
-                            {% if music.url %}
-                                <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a>
-                            {% else %}
-                                No URL available
-                            {% endif %}
+                            <a href="{{ path('app_music_show', {'id': music.id}) }}">Show</a>
                         </td>
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="3">No records found</td>
+                        <td colspan="4">No records found</td>
                     </tr>
                 {% endfor %}
             </tbody>
