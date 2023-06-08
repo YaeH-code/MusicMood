@@ -21,9 +21,17 @@
                 {% for music in music %}
                     <tr>
                         <td>{{ music.title }}</td>
+<<<<<<< HEAD
                         <td class="text-center pt-3"> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
                         <td class="a_mood text-center">
                             <a href="{{ path('app_music_show', {'id': music.id}) }}" class="btn">Let's GO 	&raquo;</a>
+=======
+                        <td> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
+                        <td>
+
+                            <a href="{{ path('app_music_show', {'id': music.id}) }}">Ajouter un commentaire 	&raquo;</a>
+
+>>>>>>> 2c41a077e732cbe9cdfda98ba13b1948cb5de731
                         </td>
                     </tr>
                 {% else %}
