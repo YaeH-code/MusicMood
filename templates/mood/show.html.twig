@@ -9,7 +9,7 @@
         <tbody>
             <tr>
                 <th>Mood</th>
-                <td>{{ mood.name }}</td>
+                <td class="text-center">{{ mood.name }}</td>
             </tr>
         </tbody>
     </table>
@@ -22,9 +22,9 @@
                     <tr>
                         <td>{{ music.title }}</td>
 
-                        <td class="text-center pt-3"> <a href="{{ music.url }}"  target="_blank"><i class="fa-brands fa-youtube  fa-2xl" style="color: red;"></i></i></a></td>
-                        <td>
-                            <a href="{{ path('app_music_show', {'id': music.id}) }}">Ajouter un commentaire 	&raquo;</a>
+                        <td class="text-center pt-3 "> <a href="{{ music.url }}" target="_blank"><i class="fa-brands fa-youtube fa-2xl icon_mood" style="color: red;"></i></i></a></td>
+                        <td class="text-center">
+                            <a href="{{ path('app_music_show', {'id': music.id}) }}" class="btn btn_comment">Regardez les commentaires 	&raquo;</a>
                         </td>
                     </tr>
                 {% else %}
@@ -35,7 +35,7 @@
             </tbody>
         </table>
         <div class="a_mood">
-            <a class="a_mood" href="{{ path('app_mood_index') }}">&lsaquo; &lsaquo; Retour à la liste</a>
+            <a class="a_mood" href="{{ path('app_mood_index') }}">&lsaquo; Retour à la liste</a>
         </div>
     </div>
 </div>

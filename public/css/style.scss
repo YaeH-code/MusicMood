@@ -207,6 +207,18 @@ table tr td, table tr th{
   @include tool_a()
 }
 
+.icon_mood{
+  @include transact()
+}
+
+.icon_mood:hover{
+  @include transform()
+}
+
+.btn_comment{
+  color: #fff !important;
+}
+
 /* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
 /* --------------------------------------- */

@@ -7,3 +7,11 @@
 @mixin tool_a() {
   text-decoration: none;
 }
+
+@mixin transact(){
+  transition: all 1s ease-in-out;
+}
+
+@mixin transform(){
+  transform: scale(1.2);
+}

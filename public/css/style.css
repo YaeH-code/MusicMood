@@ -184,6 +184,18 @@ table tr td, table tr th {
   text-decoration: none;
 }
 
+.icon_mood {
+  transition: all 1s ease-in-out;
+}
+
+.icon_mood:hover {
+  transform: scale(1.2);
+}
+
+.btn_comment {
+  color: #fff !important;
+}
+
 /* --------------------------------------- */
 /* -----------------ADMIN PAGES------------------- */
 /* --------------------------------------- */

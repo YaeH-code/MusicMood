@@ -3,29 +3,25 @@
 {% block title %}Music{% endblock %}
 
 {% block body %}
-    <h1 class="mt-5 mb-5 text-center">Music</h1>
+    <h1 class="mt-5 mb-5 text-center">Commentaire sur cette musique</h1>
     <div class="container mood_div">
         <table class="table table-borderless ">
         <tbody>
             <tr>
-                <th>Title</th>
+                <th>Misic Title : </th>
                 <td>{{ music.title }}</td>
-            </tr>
-            <tr>
-                <th>Url</th>
-                <td>{{ music.url }}</td>
             </tr>
         </tbody>
     </table>
 
-    <div>
-        <a href="{{ path('app_comment_new', {'id': music.id}) }}">Ajouter un Commentaire</a>
+    <div class="text-center mt-5 mb-5">
+        <a href="{{ path('app_comment_new', {'id': music.id}) }}" class="btn btn-dark">Ajouter un Commentaire</a>
     </div>
 
     <div>
         {% for comment in comments %}
-            <div>{{ comment.user.pseudo }}</div>
-            <div>{{ comment.content }}</div>
+            <div>Nom : {{ comment.user.pseudo }}</div>
+            <div>commentaire : {{ comment.content }}</div>
         {% endfor %}
     </div>
 </div>
