@@ -3,21 +3,22 @@
 {% block title %}Hello LookupController!{% endblock %}
 
 {% block body %}
-<div>
-    <form action="{{ path('app_lookup') }}" method="GET">
+<div class="container mood_div">
+    <h3 class="mt-5 text-center">Résultat de recherche</h3>
+    <div class="text-center">
+    <form action="{{ path('app_lookup') }}" method="GET" class="mt-5 mb-5">
         <input type="text" name="search" placeholder="Recherche...">
         <button type="submit">Rechercher</button>
     </form>
-</div>
-<table>
+    </div>
+<table class="table table-borderless">
 {% if music is not empty %}
     {% for musicItem in music %}
     <tr>
-        <td>{{ musicItem.id }}</td>
         <td>{{ musicItem.title }}</td>
-        <td>{{ musicItem.url }}</td>
-        <td>
-            <a href="{{ path('app_music_show', {'id': musicItem.id}) }}">Show</a>
+        <td class="text-center pt-3 "> <a href="{{ musicItem.url }}" target="_blank"><i class="fa-brands fa-youtube fa-2xl icon_mood" style="color: red;"></i></i></a></td>
+        <td class="text-center">
+            <a href="{{ path('app_music_show', {'id': musicItem.id}) }}" class="btn btn_comment">Regardez les commentaires 	&raquo;</a>
         </td>
     </tr>
     {% endfor %}
@@ -27,4 +28,5 @@
     </tr>
 {% endif %}
 </table>
+</div>
 {% endblock %}
