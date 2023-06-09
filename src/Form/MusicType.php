@@ -14,35 +14,10 @@ class MusicType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title', TextType::class, [
-                'label' => 'Titre',
-                'attr'=>[
-                    'class' => 'form-control',
-                    'style' => 'width: 40vh'
-                    ]
-                ])
-            ->add('url', TextType::class, [
-                'label' => 'URL',
-                'attr'=>[
-                    'class' => 'form-control',
-                    'style' => 'width: 40vh'
-                    ]
-                ])
-            ->add('user', TextType::class,[
-                'attr'=>[
-                    'label' => 'Nom',
-                    'class' => 'form-control',
-                    'style' => 'width: 10vh'
-                    ]
-                ])
-            ->add('mood', EntityType::class, array(
-                "class" => "App\Entity\Mood",
-                'attr'=>[
-                    'label' => 'Mood',
-                    'class' => 'form-control',
-                    'style' => 'width: 10vh'
-                    ]
-        ))
+            ->add('title')
+            ->add('url')
+            ->add('user')
+            ->add('mood')
         ;
     }
 
