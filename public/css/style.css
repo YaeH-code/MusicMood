@@ -22,7 +22,7 @@ nav li {
 /* --------------------------------------- */
 /* -----------------Home------------------- */
 /* --------------------------------------- */
-.home_div {
+main {
   height: 100vh;
 }
 
@@ -33,6 +33,11 @@ p, h1, h2, h3 {
 .p_home {
   font-size: 28px;
   text-align: center;
+}
+
+.search_home {
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .img_home {

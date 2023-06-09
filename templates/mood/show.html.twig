@@ -8,8 +8,7 @@
         <table class="table table-borderless ">
         <tbody>
             <tr>
-                <th>Mood</th>
-                <td class="text-center">{{ mood.name }}</td>
+                <td class="h5 text-center text-uppercase">{{ mood.name }}</td>
             </tr>
         </tbody>
     </table>
@@ -21,7 +20,6 @@
                 {% for music in music %}
                     <tr>
                         <td>{{ music.title }}</td>
-
                         <td class="text-center pt-3 "> <a href="{{ music.url }}" target="_blank"><i class="fa-brands fa-youtube fa-2xl icon_mood" style="color: red;"></i></i></a></td>
                         <td class="text-center">
                             <a href="{{ path('app_music_show', {'id': music.id}) }}" class="btn btn_comment">Regardez les commentaires 	&raquo;</a>

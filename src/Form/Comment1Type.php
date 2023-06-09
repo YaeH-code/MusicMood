@@ -14,10 +14,11 @@ class Comment1Type extends AbstractType
     {
         $builder
             ->add('content', TextareaType::class, [
-                'label' => 'Commentaire',
+                'label' => false,
                 'attr'=>[
                     'class' => 'form-control',
-                    'style' => 'height: 100px'
+                    'style' => 'height: 100px',
+                    'placeholder' => 'Votre commentaire..',
                     ]
                 ])
          

@@ -28,11 +28,11 @@ body {
 /* -----------------Home------------------- */
 /* --------------------------------------- */
 
-.home_div{
+  main{
   height: 100vh;
 }
 
-p,h1,h2,h3{
+  p,h1,h2,h3{
   color: $p;
 }
   .p_home{
@@ -40,11 +40,15 @@ p,h1,h2,h3{
     text-align: center;
   }
 
+  .search_home{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
   .img_home{
     width: 60vh;
     height: 50vh;
   }
-
 
   .btn_icon_home{
     background-color:  $nav-color !important;

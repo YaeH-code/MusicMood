@@ -3,7 +3,9 @@
 {% block title %}Music index{% endblock %}
 
 {% block body %}
-    <h1>Music index</h1>
+<main>
+    <div class="container">
+    <h1 class="text-center">Music index</h1>
 
     <table class="table">
         <thead>
@@ -34,4 +36,6 @@
     </table>
 
     <a href="{{ path('app_admin_music_new') }}">Create new</a>
+    </div>
+</main>
 {% endblock %}
