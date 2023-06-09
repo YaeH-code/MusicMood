@@ -10,6 +10,7 @@
                 <tr>
                     <th>Content</th>
                     <th>Date</th>
+                    <th>actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +18,10 @@
                 <tr>
                     <td>{{ comment.content }}</td>
                     <td>{{ comment.createdAt ? comment.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td class="text-center actions_mood">
+                        <a href="{{ path('app_admin_comment_show', {'id': comment.id}) }}" class="text-light">détail</a>
+                        <a href="{{ path('app_admin_comment_edit', {'id': comment.id}) }}" class="text-light">edit</a>
+                    </td>
                 </tr>
             {% else %}
                 <tr>

@@ -5,34 +5,38 @@
 {% block body %}
     <h1 class="mt-5 mb-5 text-center">Mood</h1>
     <div class="container mood_div">
-        <table class="table table-bordered">
-            <tbody>
+        <table class="table table-borderless ">
+        <tbody>
+            <tr>
+                <th>Mood</th>
+                <td class="text-center">{{ mood.name }}</td>
+            </tr>
+        </tbody>
+    </table>
 
-                
-                <tr>
-                    <td colspan="3" class="text-center"><h1>{{ mood.name }}</h1></td>
-                </tr>
+
+    <div>
+        <table class="table table-borderless">
+            <tbody>
                 {% for music in music %}
                     <tr>
                         <td>{{ music.title }}</td>
+
+                        <td class="text-center pt-3 "> <a href="{{ music.url }}" target="_blank"><i class="fa-brands fa-youtube fa-2xl icon_mood" style="color: red;"></i></i></a></td>
                         <td class="text-center">
-                            <a href="{{ music.url }}" target="_blank">
-                                <i class="fab fa-youtube fa-2x text-danger"></i>
-                            </a>
-                        </td>
-                        <td class="text-center">
-                            <a href="{{ path('app_music_show', {'id': music.id}) }}" class="btn btn-primary">Regardez les commentaires &raquo;</a>
+                            <a href="{{ path('app_music_show', {'id': music.id}) }}" class="btn btn_comment">Regardez les commentaires 	&raquo;</a>
                         </td>
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="3">No records found</td>
+                        <td colspan="4">No records found</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <div class="text-center">
-            <a class="btn btn-secondary" href="{{ path('app_mood_index') }}">&lsaquo; Retour à la liste</a>
+        <div class="a_mood">
+            <a class="a_mood" href="{{ path('app_mood_index') }}">&lsaquo; Retour à la liste</a>
         </div>
     </div>
+</div>
 {% endblock %}
