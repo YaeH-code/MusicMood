@@ -19,6 +19,7 @@ body {
 
   nav {
       background-color:  $nav-color;
+      // background-color:  $nav-color2;
    li { 
     @include flex();
     }
@@ -46,7 +47,7 @@ p,h1,h2,h3{
 
 
   .btn_icon_home{
-  background-color:  $nav-color !important;
+    background-color:  $nav-color !important;
   }
 
   @media (max-width: 750px) {
@@ -77,8 +78,8 @@ p,h1,h2,h3{
 
 .category{
     box-shadow: 10px 10px 10px 5px gray;
-    background: rgb(255,133,214);
-    background: linear-gradient(90deg, rgba(255,133,214,1) 0%, rgba(255,133,214,1) 0%, rgba(255,202,158,1) 100%);
+    background: $color-background;
+    background: $color-background-gradient;
 }
   
 .category > a{
@@ -93,7 +94,7 @@ p,h1,h2,h3{
 
 .category > a:hover{
   text-decoration: none;
-  color: rgb(188, 163, 163);
+  color: rgb(181, 164, 164);
   transform: scale(1.2);
 }
 
@@ -184,10 +185,14 @@ p,h1,h2,h3{
 /* --------------------------------------- */
 
 table tr td, table tr th{
-  background-color: #5523b9 !important;
-  box-shadow: 10px 10px 10px 5px gray !important;
+  // background-color: #5523b9 !important;
+  background-color: rgb(6 6 6 / 82%) !important;
+  // box-shadow: 10px 10px 10px 5px gray !important;
+  box-shadow: $btn-boxshadow !important;
   color: #fff !important;
   border-radius: 5px;
+  border-left: 1px solid #ffffff;
+  min-height: calc(100% - 250px);
 }
 
 .table-borderless > tbody > tr > td,
