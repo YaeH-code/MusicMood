@@ -1,11 +1,19 @@
-<h1>Hi!</h1>
+{% extends 'base.html.twig' %}
 
-<p>
-    Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant</p>
+{% block title %}Reset your password{% endblock %}
 
-<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+{% block body %}
+    <main class="text-center">
+        <h1>Hi!</h1>
 
-<p>
-    Ce lien expirera dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+            <p>
+                Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant</p>
 
-<p>Cheers!</p>
+            <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+            <p>
+                Ce lien expirera dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+
+            <p>Ciao!</p>
+    </main>
+{% endblock %}
