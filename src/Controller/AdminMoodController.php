@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Music;
 use App\Entity\Mood;
 use App\Form\MoodType;
 use App\Repository\MoodRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -70,21 +72,22 @@ class AdminMoodController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_admin_mood_delete', methods: ['POST'])]
-    public function delete(Request $request, Mood $mood, MoodRepository $moodRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$mood->getId(), $request->request->get('_token'))) {
-            $moodRepository->remove($mood, true);
+public function delete(Request $request, Mood $mood, MoodRepository $moodRepository, EntityManagerInterface $entityManager): Response
+{
+    if ($this->isCsrfTokenValid('delete'.$mood->getId(), $request->request->get('_token'))) {
+        // Supprimer les musiques associées
+        $musics = $mood->getMusics();
+        foreach ($musics as $music) {
+            $entityManager->remove($music);
         }
 
-        return $this->redirectToRoute('app_admin_mood_index', [], Response::HTTP_SEE_OTHER);
+        // Supprimer le mood
+        $entityManager->remove($mood);
+        $entityManager->flush();
     }
 
-        // Add the following method to handle the redirection
-        #[Route('/redirect', name: 'app_admin_mood_redirect')]
-        public function redirectAction(): Response
-        {
-            // Redirect the user to the login page for admin
-            return $this->redirectToRoute('app_login');
-        }
+    return $this->redirectToRoute('app_admin_mood_index', [], Response::HTTP_SEE_OTHER);
+}
+        
     }
-
+    
