@@ -278,3 +278,15 @@ table tr td, table tr th {
   color: #391384;
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
+
+/* progress-bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  z-index: 9999;
+  transition: width 0.3s;
+}
