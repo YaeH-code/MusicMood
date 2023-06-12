@@ -3,10 +3,12 @@
 {% block title %}New Comment{% endblock %}
 
 {% block body %}
-    <h1>
-        Créer un nouveau commentaire</h1>
+    <div class="container text-center mood_div">
+        <h1 class="mt-5 mb-5">Créer un nouveau commentaire</h1>
 
     {{ include('comment/_form.html.twig') }}
-
- 
+        <div class="a_mood">
+            <a class="a_mood" href="{{ path('app_mood_index') }}">&lsaquo; Retour à la liste</a>
+        </div>
+    </div>
 {% endblock %}

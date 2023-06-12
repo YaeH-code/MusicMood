@@ -1,0 +1,23 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultats de recherche YouTube{% endblock %}
+
+{% block body %}
+  <h1>Résultats de recherche YouTube</h1>
+
+  {% if videos is not empty %}
+    <ul>
+      {% for video in videos %}
+        <li>
+          <h2>{{ video.snippet.title }}</h2>
+          <p>{{ video.snippet.description }}</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.id.videoId }}" frameborder="0" allowfullscreen></iframe>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aucune vidéo trouvée pour la recherche spécifiée.</p>
+  {% endif %}
+{% endblock %}

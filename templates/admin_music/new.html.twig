@@ -3,9 +3,13 @@
 {% block title %}New Music{% endblock %}
 
 {% block body %}
-    <h1>Create new Music</h1>
-
+<main>
+    <div class="container">
+    <h1 clas="text-center">Create new Music</h1>
+    
     {{ include('admin_music/_form.html.twig') }}
 
     <a href="{{ path('app_admin_music_index') }}">back to list</a>
+    </div>
+</main>
 {% endblock %}

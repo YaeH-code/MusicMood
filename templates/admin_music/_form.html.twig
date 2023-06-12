@@ -1,4 +1,84 @@
+
 {{ form_start(form) }}
+<div>
+    <label for="video-search">Rechercher une vidéo sur YouTube:</label>
+    <input type="text" id="video-search" name="video-search" placeholder="Rechercher une vidéo">
+    <button type="button" id="search-button">Rechercher</button>
+</div>
+
+
+    <div id="video-thumbnails"></div>
+
+
     {{ form_widget(form) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+
+<script>
+    // Code JavaScript à placer dans votre template ou dans un fichier séparé
+
+    // Fonction pour effectuer la recherche de vidéos sur YouTube
+    function searchVideos() {
+        const searchQuery = document.getElementById('video-search').value;
+        const apiKey = 'AIzaSyD1kZjq-UriuacoYOAn6O1JQmKsHc1lqiU'; // Remplacez par votre propre clé API YouTube
+
+        // Effectuer une requête AJAX pour récupérer les résultats de recherche de vidéos
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(searchQuery)}&maxResults=10&type=video&key=${apiKey}`, true);
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                displayVideoThumbnails(response.items);
+            } else {
+                console.error('Erreur lors de la recherche de vidéos sur YouTube.');
+            }
+        };
+
+        xhr.send();
+    }
+
+    // Fonction pour afficher les miniatures des vidéos
+    function displayVideoThumbnails(videos) {
+        const videoThumbnailsContainer = document.getElementById('video-thumbnails');
+        videoThumbnailsContainer.innerHTML = '';
+    
+        let counter = 0;
+    
+        videos.forEach(function(video) {
+            if (counter >= 2) {
+                return; // Exit the loop after adding two thumbnails
+            }
+    
+            const videoId = video.id.videoId;
+            const thumbnailUrl = video.snippet.thumbnails.default.url;
+            const videoTitle = video.snippet.title;
+    
+            // Créer un élément de titre, une image et un bouton de sélection pour chaque vidéo
+            const titleElement = document.createElement('h3');
+            titleElement.innerText = videoTitle;
+    
+            const thumbnailImage = document.createElement('img');
+            thumbnailImage.src = thumbnailUrl;
+    
+            const selectButton = document.createElement('button');
+            selectButton.className = 'btn'
+            selectButton.innerText = 'Sélectionner';
+            selectButton.addEventListener('click', function() {
+                const urlInput = document.getElementById('{{ form.url.vars.id }}');
+                urlInput.value = `https://www.youtube.com/watch?v=${videoId}`;
+            });
+            
+            // Ajouter le titre, l'image miniature et le bouton de sélection à la section des miniatures des vidéos
+            videoThumbnailsContainer.appendChild(titleElement);
+            videoThumbnailsContainer.appendChild(thumbnailImage);
+            videoThumbnailsContainer.appendChild(selectButton);
+    
+            counter++;
+        });
+    }
+
+    // Gérer le clic sur le bouton de recherche
+    const searchButton = document.getElementById('search-button');
+    searchButton.addEventListener('click', searchVideos);
+</script>
