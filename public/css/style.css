@@ -277,16 +277,25 @@ table tr td, table tr th {
 .a_politique {
   color: #391384;
   font-weight: bold;
-}/*# sourceMappingURL=style.css.map */
+}
 
-/* progress-bar */
 #progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 0;
   height: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   z-index: 9999;
   transition: width 0.3s;
 }
+
+#date-time {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}/*# sourceMappingURL=style.css.map */
