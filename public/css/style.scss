@@ -95,13 +95,13 @@ body {
   height: 100%;
   padding-top: 5%;
   padding-bottom: 5%;
-  color: rgb(69, 45, 45);
+  color: $color-category1;
   transition: all 1s ease-in-out;
 }
 
 .category > a:hover{
   text-decoration: none;
-  color: rgb(181, 164, 164);
+  color: $color-category2;
   transform: scale(1.2);
 }
 
@@ -130,7 +130,7 @@ body {
     padding-bottom: 5%;
     width: 40%;
     height: 50%;
-    box-shadow: 10px 10px 10px 5px gray;
+    box-shadow: $box-shadow-normal;
     background: $color-background;
     background: $color-background-gradient;
 }
@@ -176,7 +176,7 @@ body {
 }
 
 .reset_mdp > a:hover{
-  color: #6033bb;
+  color: $nav-color;
   text-decoration: none;
 }
 /* --------------------------------------- */
@@ -190,7 +190,7 @@ body {
   padding-bottom: 5%;
   width: 70%;
   height: 50%;
-  box-shadow: 10px 10px 10px 5px gray;
+  box-shadow: $btn-boxshadow-normal;
   background: $color-background;
   background: $color-background-gradient;
 }
@@ -201,7 +201,7 @@ body {
 
 table tr td, table tr th{
   // background-color: #5523b9 !important;
-  background-color: rgb(6 6 6 / 82%) !important;
+  background-color: $color-table !important;
   // box-shadow: 10px 10px 10px 5px gray !important;
   box-shadow: $btn-boxshadow !important;
   color: #fff !important;
@@ -249,7 +249,7 @@ table tr td, table tr th{
 
 
 .btn_act > a:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: $btn-boxshadow;
 }
 
 .actions_mood > a{
@@ -274,7 +274,7 @@ table tr td, table tr th{
 
 .return > a:hover {
   @include tool_a();
-  color: red;
+  color: $nav-color;
 }
 
 /* --------------------------------------- */
@@ -287,7 +287,7 @@ table tr td, table tr th{
 
 .edit > a:hover {
   @include tool_a();
-  color: green;
+  color: $nav-color;
 }
 
 
@@ -297,19 +297,19 @@ table tr td, table tr th{
 /* --------------------------------------- */
 .h1_politique{
   margin-top: 40px;
-  color:#391384 ;
+  color: $politique ;
   text-align: center;
 }
 
 .p_politique{
-  color: #391384;
+  color: $politique;
   margin-left: 30px;
   margin-right: 30px;
   font-size: 1.25rem;
 }
 
 .a_politique{
-  color: #391384;
+  color: $politique;
   font-weight: bold;
 }
 
