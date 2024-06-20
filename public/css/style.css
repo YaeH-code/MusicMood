@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/* --------------------------------------- */
+/* ------Pour toutes les pages------------ */
+/* --------------------------------------- */
+body {
+  background: rgb(255, 133, 214);
+  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
+  font-family: "Abel", sans-serif;
+}
+
+/* --------------------------------------- */
+/* -----------------nav------------------- */
+/* --------------------------------------- */
+nav {
+  background-color: #6033bb;
+}
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+/* --------------------------------------- */
+/* -----------------Home------------------- */
+/* --------------------------------------- */
+main {
+  height: 100vh;
+}
+
+p, h1, h2, h3 {
+  color: #391384;
+}
+
+.p_home {
+  font-size: 28px;
+  text-align: center;
+}
+
+.search_home {
+  padding-left: 20%;
+  padding-right: 20%;
+  box-shadow: 8px 8px 12px #555;
+}
+
+.img_home {
+  width: 60vh;
+  height: 50vh;
+}
+
+.btn_icon_home {
+  background-color: #6033bb !important;
+}
+
+@media (max-width: 750px) {
+  .img_home {
+    width: 40vh;
+    height: 30vh;
+  }
+  .p_home {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .p_home {
+    font-size: 13px;
+  }
+}
+/* --------------------------------------- */
+/* -----------------Mood------------------- */
+/* --------------------------------------- */
+.mood_div {
+  margin-bottom: 18rem;
+}
+
+.category {
+  box-shadow: 10px 10px 10px 5px gray;
+  background: rgb(255, 133, 214);
+  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
+}
+
+.category > a {
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: rgb(69, 45, 45);
+  transition: all 1s ease-in-out;
+}
+
+.category > a:hover {
+  text-decoration: none;
+  color: rgb(181, 164, 164);
+  transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .title_mood {
+    font-size: 30px;
+  }
+}
+/* --------------------------------------- */
+/* -----------------Register------------------- */
+/* --------------------------------------- */
+.register_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15rem;
+}
+
+.registration {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 40%;
+  height: 50%;
+  box-shadow: 10px 10px 10px 5px gray;
+  background: rgb(255, 133, 214);
+  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
+}
+
+@media (max-width: 995px) {
+  .registration {
+    width: 45%;
+    height: 50%;
+  }
+}
+@media (max-width: 460px) {
+  .registration {
+    width: 100%;
+    height: 50%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+@media (max-width: 767px) {
+  .registration {
+    width: 60%;
+    height: 50%;
+  }
+}
+/* --------------------------------------- */
+/* -----------------Connexion------------------- */
+/* --------------------------------------- */
+.login_info {
+  font-size: 18px;
+}
+
+.reset_mdp > a {
+  color: #ffffff;
+}
+
+.reset_mdp > a:hover {
+  color: #6033bb;
+  text-decoration: none;
+}
+
+/* --------------------------------------- */
+/* -----------------Contact Page------------------- */
+/* --------------------------------------- */
+.card_contact {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 70%;
+  height: 50%;
+  box-shadow: 10px 10px 10px 5px gray;
+  background: rgb(255, 133, 214);
+  background: linear-gradient(90deg, rgb(255, 133, 214) 0%, rgb(255, 133, 214) 0%, rgb(255, 202, 158) 100%);
+}
+
+/* --------------------------------------- */
+/* -----------------Mood show page------------------- */
+/* --------------------------------------- */
+table tr td, table tr th {
+  background-color: rgba(6, 6, 6, 0.82) !important;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !important;
+  color: #fff !important;
+  border-radius: 5px;
+  border-left: 1px solid #ffffff;
+  min-height: calc(100% - 250px);
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+  border: none;
+}
+
+.a_mood > a {
+  color: #fff;
+}
+
+.a_mood > a:hover {
+  text-decoration: none;
+}
+
+.icon_mood {
+  transition: all 1s ease-in-out;
+}
+
+.icon_mood:hover {
+  transform: scale(1.2);
+}
+
+.btn_comment {
+  color: #fff !important;
+}
+
+/* --------------------------------------- */
+/* -----------------ADMIN PAGES------------------- */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* -----------------Admin Mood List------------------- */
+/* --------------------------------------- */
+.btn_act > a:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.actions_mood > a {
+  color: black;
+}
+
+.actions_mood > a:hover {
+  text-decoration: none;
+}
+
+/* --------------------------------------- */
+/* -----------------Admin Mood Créer------------------- */
+/* --------------------------------------- */
+.btn_act2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.return > a {
+  color: black;
+}
+
+.return > a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+/* --------------------------------------- */
+/* -----------------Admin Mood Détail------------------- */
+/* --------------------------------------- */
+.edit > a {
+  color: black;
+}
+
+.edit > a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+/* --------------------------------------- */
+/*-----------Politique de confidentialité-----------*/
+/* --------------------------------------- */
+.h1_politique {
+  margin-top: 40px;
+  color: #391384;
+  text-align: center;
+}
+
+.p_politique {
+  color: #391384;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 1.25rem;
+}
+
+.a_politique {
+  color: #391384;
+  font-weight: bold;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: white;
+  z-index: 9999;
+  transition: width 0.3s;
+}
+
+#date-time {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 30px;
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 8px 8px 12px #555;
+}/*# sourceMappingURL=style.css.map */

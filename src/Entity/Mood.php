@@ -21,9 +21,13 @@ class Mood
     #[ORM\OneToMany(mappedBy: 'mood', targetEntity: Music::class)]
     private Collection $music;
 
+    #[ORM\OneToMany(mappedBy: 'mood', targetEntity: Music::class, orphanRemoval: true)]
+    private Collection $musics;
+
     public function __construct()
     {
         $this->music = new ArrayCollection();
+        $this->musics = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -50,11 +54,19 @@ class Mood
     {
         return $this->music;
     }
+    /**
+     * @return Collection<int, Music>
+     */
+    public function getMusics(): Collection
+    {
+        return $this->musics;
+    }
 
+    
     public function addMusic(Music $music): self
     {
-        if (!$this->music->contains($music)) {
-            $this->music->add($music);
+        if (!$this->musics->contains($music)) {
+            $this->musics->add($music);
             $music->setMood($this);
         }
 
@@ -63,7 +75,7 @@ class Mood
 
     public function removeMusic(Music $music): self
     {
-        if ($this->music->removeElement($music)) {
+        if ($this->musics->removeElement($music)) {
             // set the owning side to null (unless already changed)
             if ($music->getMood() === $this) {
                 $music->setMood(null);
@@ -76,4 +88,5 @@ class Mood
     public function __toString() {
         return $this->name;
     }
+    
 }

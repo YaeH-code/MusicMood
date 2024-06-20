@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Music;
 use App\Entity\Mood;
 use App\Form\MoodType;
 use App\Repository\MoodRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,6 +18,9 @@ class AdminMoodController extends AbstractController
     #[Route('/', name: 'app_admin_mood_index', methods: ['GET'])]
     public function index(MoodRepository $moodRepository): Response
     {
+        // Check if the user has the required role
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('admin_mood/index.html.twig', [
             'moods' => $moodRepository->findAll(),
         ]);
@@ -67,12 +72,22 @@ class AdminMoodController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_admin_mood_delete', methods: ['POST'])]
-    public function delete(Request $request, Mood $mood, MoodRepository $moodRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$mood->getId(), $request->request->get('_token'))) {
-            $moodRepository->remove($mood, true);
+public function delete(Request $request, Mood $mood, MoodRepository $moodRepository, EntityManagerInterface $entityManager): Response
+{
+    if ($this->isCsrfTokenValid('delete'.$mood->getId(), $request->request->get('_token'))) {
+        // Supprimer les musiques associées
+        $musics = $mood->getMusics();
+        foreach ($musics as $music) {
+            $entityManager->remove($music);
         }
 
-        return $this->redirectToRoute('app_admin_mood_index', [], Response::HTTP_SEE_OTHER);
+        // Supprimer le mood
+        $entityManager->remove($mood);
+        $entityManager->flush();
     }
+
+    return $this->redirectToRoute('app_admin_mood_index', [], Response::HTTP_SEE_OTHER);
 }
+        
+    }
+    

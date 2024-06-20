@@ -17,10 +17,14 @@ class AdminCommentController extends AbstractController
     #[Route('/', name: 'app_admin_comment_index', methods: ['GET'])]
     public function index(CommentRepository $commentRepository): Response
     {
+        // Check if the user has the required role
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('admin_comment/index.html.twig', [
             'comments' => $commentRepository->findAll(),
         ]);
     }
+
 
     #[Route('/new', name: 'app_admin_comment_new', methods: ['GET', 'POST'])]
     public function new(Request $request, CommentRepository $commentRepository): Response
@@ -77,4 +81,11 @@ class AdminCommentController extends AbstractController
 
         return $this->redirectToRoute('app_admin_comment_index', [], Response::HTTP_SEE_OTHER);
     }
+    #[Route('/redirect', name: 'app_admin_comment_redirect')]
+    public function redirectAction(): Response
+    {
+        // Redirect the user to the login page for admin
+        return $this->redirectToRoute('app_login');
+    }
+
 }

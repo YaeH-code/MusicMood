@@ -16,6 +16,9 @@ class AdminMusicController extends AbstractController
     #[Route('/', name: 'app_admin_music_index', methods: ['GET'])]
     public function index(MusicRepository $musicRepository): Response
     {
+        // Check if the user has the required role
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         return $this->render('admin_music/index.html.twig', [
             'music' => $musicRepository->findAll(),
         ]);
@@ -74,5 +77,12 @@ class AdminMusicController extends AbstractController
         }
 
         return $this->redirectToRoute('app_admin_music_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+    #[Route('/redirect', name: 'app_admin_music_redirect')]
+    public function redirectAction(): Response
+    {
+        // Redirect the user to the login page for admin
+        return $this->redirectToRoute('app_login');
     }
 }
