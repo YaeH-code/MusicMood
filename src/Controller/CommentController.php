@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\music;
+use App\Entity\Music;
 use App\Entity\Comment;
 use App\Form\Comment1Type;
 use App\Repository\CommentRepository;
@@ -37,7 +37,7 @@ class CommentController extends AbstractController
             ], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('comment/new.html.twig', [
+        return $this->render('comment/new.html.twig', [
             'comment' => $comment,
             'form' => $form->createView(),
         ]);

@@ -1,22 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{asset('css/home.css')}}">
-{% endblock %}
+{% block title %}Music Mood{% endblock %}
 
 {% block body %}
-
-<div class="container text-center">
-    <img src="{{asset('images/logo_acceuil.png')}}"></img>
-    <p>L'application qui vous trouve une musique vidéo selon votre humeur</p>
-
-    <form class="searchbox" role="search">
-    {# <div class=""> #}
-        <input class="form-control me-2 bg-light" type="search" aria-label="Search">
-        <i class="fa-solid fa-magnifying-glass icon_search"></i>
-        {# </div> #}
-      </form>
-    </form>
+<main>
+  <div class="container text-center">
+      <img class="img_home" src="{{asset('images/logo_accueil.png')}}"></img>
+      <p class="p_home">L'application qui vous trouve une musique vidéo selon votre humeur</p>
+        <form class="form-group row rounded search_home" role="search" action="{{path('app_lookup')}}" method="GET">
+          <div class="input-group input-group-sm mt-5 mb-3 custom-search-bar">
+            {# <div class="col-sm-5"> #}
+            {# <input class="form-control" name="search" type="search" placeholder="Rechercher" aria-label="Search"> #}
+        {# <label for="ex3"></label> #}
+            <input class="form-control" id="ex3" name="search" type="search" placeholder="Rechercher" aria-label="Search">
+            <button type="submit" class="input-group-text ps-3 pe-3 rounded text-white btn_icon_home">
+            <i class="fas fa-search"></i>
+          </button>
+            {# </div> #}
+          </div>
+        </form>
+  </div>
+</main>
+{# {% block footer %}{% endblock %} #}
 {% endblock %}

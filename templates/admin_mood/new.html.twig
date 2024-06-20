@@ -3,9 +3,12 @@
 {% block title %}New Mood{% endblock %}
 
 {% block body %}
-    <h1>Create new Mood</h1>
+    <div class="container text-center mood_div">
+        <h1 class="mt-5 mb-5">Créer le nouveau Mood</h1>
 
-    {{ include('admin_mood/_form.html.twig') }}
-
-    <a href="{{ path('app_admin_mood_index') }}">back to list</a>
+        {{ include('admin_mood/_form.html.twig') }}
+        <div class="return">
+            <a href="{{ path('app_admin_mood_index') }}">&lsaquo; Retour à la liste </a>
+        </div>
+    </div>
 {% endblock %}
